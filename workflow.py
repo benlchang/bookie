@@ -1,6 +1,6 @@
 import os
 from langgraph.graph import Graph
-from bookie.agents import ranking, search, summary
+from agents import ranking, search, summary
 
 class Master():
     def __init__(self):
@@ -26,6 +26,7 @@ class Master():
         workflow.add_edge('ranking', 'summary')
 
         workflow.set_entry_point('search')
+        workflow.set_finish_point('summary')
 
         chain = workflow.compile()
 
@@ -36,7 +37,7 @@ class Master():
             book = input('Which book shall I fetch for ya?')
 
             response = chain.invoke({'book': book, 'find_recs': find_recs == '2'})
-            print(response)
+            print(f'\n\n{response["summary"]}\n\n')
         
 
 if __name__ == '__main__':
