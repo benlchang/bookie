@@ -77,6 +77,7 @@ class Master():
             # Accept user input from command line
             find_recs = input('1) Analyze a book\n2) Find me recommendations based on this book\n3) Quit\n\n')
             if find_recs not in '12':
+                print('ô¿ô : See ya!')
                 break
             book = input('\n\nô¿ô : Alright! Which book should I use for you?\n\n')
 
