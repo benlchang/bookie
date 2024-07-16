@@ -17,11 +17,20 @@ $ cd bookie
 $ pip install -r requirements.txt
 ```
 
-Bookie will need to make calls to both the Tavily Search API and OpenAI's ChatGPT 3.5 model. You'll have to define a 'TAVILY_API_KEY' and 'OPENAI_API_KEY' from the command line like this:
+Bookie will need to make calls to both the Tavily Search API and OpenAI's ChatGPT 3.5 model. You'll have to define a 'TAVILY_API_KEY' and 'OPENAI_API_KEY' from the command line like this.  
+You can export these keys to your global environment variables:
 
 ```
+Windows:
 $ export TAVILY_API_KEY = <your Tavily API key>
 $ export OPENAI_API_KEY = <your OpenAI API key>
+```
+
+Or, if you're running a Python virtual environment, add these lines to your activate.bat file under env\scripts\:
+
+```
+set TAVILY_API_KEY = <your Tavily API key>
+set OPENAI_API_KEY = <your OpenAI API key>
 ```
 
 After exporting your API keys, make sure you're in the root directory before starting the Usage section to ensure everything's working properly.
