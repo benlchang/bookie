@@ -55,9 +55,12 @@ each time about your thoughts.
 
 If you like one of the books, type '1' and hit enter. You'll be sent back to the title screen to a happy Bookie!
 
-If you don't like the book, type '2' and hit enter. If you exhaust the first list of 10, the workflow will restart, trying not to recommend any books you've already rejected.
+If you don't like the book, type '2' and hit enter. Bookie will pick out new books from the list of 10 from search.  
+If you exhaust the first list of 10, the workflow will restart, trying not to recommend any books you've already rejected.
 
 ![image](https://github.com/user-attachments/assets/1c63305c-6fb4-4d69-8e18-1da643ad0243)  
+
+Once you're all done, type '3' (or anything that isn't '1' or '2') and hit enter to exit. Don't forget to say bye to Bookie!
 
 
 
@@ -86,4 +89,6 @@ Overall, I'm proud of how quickly I was able to 1) learn how to interact with AI
 
 ## Credits
 Title screen bookshelf image is from https://www.asciiart.eu/books/books  
-Looking face lineart is from https://1lineart.kulaone.com/#/
+Looking face lineart is from https://1lineart.kulaone.com/#/  
+
+*Despite the name, Bookie does NOT condone any form of sports gambling. He's not Jontay Porter.
