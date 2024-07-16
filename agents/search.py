@@ -19,7 +19,7 @@ class SearchAgent:
         print('Searching for books...')
         client = TavilyClient(api_key=os.environ['TAVILY_API_KEY'])
 
-        query = f"Find me at least 10 different books similar in genre and subject matter to {book}, using only enough tokens to list the book titles."
+        query = f"Find me at least 10 different books similar in genre and subject matter to {book}, using only enough tokens to list the book titles. Do NOT return any books you've found for me before."
         results = client.search(
                     query=query,
                     max_results=5,
