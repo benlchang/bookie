@@ -24,6 +24,9 @@ $ export TAVILY_API_KEY = <your Tavily API key>
 $ export OPENAI_API_KEY = <your OpenAI API key>
 ```
 
+After exporting your API keys, make sure you're in the root directory before starting the Usage section to ensure everything's working properly.
+
+
 
 ## Usage
 Bookie runs completely on the command line. From the root directory, run the following command to start things up.
@@ -40,24 +43,31 @@ To get a summary of a book, type '1' and hit enter, then provide the title and a
 
 The workflow will run, summarizing your book and asking about your thoughts. After responding, you'll return to the main screen.
 
-To get recommendations based on a book, type '2' and hit enter, then provide the title and author of the book and hit enter again.
+To get recommendations based on a book, type '2' and hit enter, then provide the title and author of the 
+book and hit enter again.
+
 ![image](https://github.com/user-attachments/assets/e8af572a-ebd5-4ead-a86a-26ccca7f2bcb)
 
 The workflow will run, first searching for 10 similar books, then ranking them based on similarity to the book you entered. Bookie will then start summarizing each book in the list one by one, asking you 
 each time about your thoughts. 
 
+![image](https://github.com/user-attachments/assets/5bade702-d6da-4b76-bc3d-7d2d610382ad)
+
 If you like one of the books, type '1' and hit enter. You'll be sent back to the title screen to a happy Bookie!
 
-If you don't like the book, type '2' and hit enter. If you exhaust the first list of 10, the workflow will restart, trying not to recommend any books you've already rejected.*
+If you don't like the book, type '2' and hit enter. If you exhaust the first list of 10, the workflow will restart, trying not to recommend any books you've already rejected.
+
+![image](https://github.com/user-attachments/assets/1c63305c-6fb4-4d69-8e18-1da643ad0243)  
+
+
 
 
 
 
 ## Workflow Architecture
-Bookie only employs three AI agents: a **Searcher agent** that looks for similar books to the user's input using Tavily Search, a **Ranking agent** that arranges this list in order of similarity to the user's input, and finally a **Summarizer agent** that provides the user with summaries of each result one book at a time using ChatGPT. 
+Bookie only employs three AI agents: a **Searcher agent** that looks for similar books to the user's input using Tavily Search, a **Ranking agent** that arranges this list in order of similarity to the user's input, and finally a **Summarizer agent** that provides the user with summaries of each result one book at a time using ChatGPT.   
 
-If the user entered '1' and asks for a summary of one particular book, the Searcher agent will pass that book title straight to the Summarizer agent. If the user entered '2' and asks for recommendations similar to a book, the workflow will operate in its entirety: searching for similar books, ranking them, and offering summaries to the user in a loop.
-
+If the user entered '1' and asks for a summary of one particular book, the Searcher agent will pass that book title straight to the Summarizer agent. If the user entered '2' and asks for recommendations similar to a book, the workflow will operate in its entirety: searching for similar books, ranking them, and offering summaries to the user in a loop.  
 
 ## Background and Goals
 We all know a reader, don't we? I'm not much of a reader myself, but lately my girlfriend's been burning through a book a day, and her reading list
@@ -70,9 +80,10 @@ The fundamental goal of this project was to utilize AI agents to allow users to 
 * Optimizing context to improve the workflow's ability to ignore books that the user has already rejected in subsequent searches
 * Implement user-specific threads and database entries for use across multiple instances of the program
 
-Overall, I'm proud of how quickly I was able to 1) learn how to interact with AI API's, 2) construct and interact with AI agents and workflows, and 3) deliver a product that is at least somewhat useful. Hopefully I'll have some time to flesh this out a bit more this semester!
+Overall, I'm proud of how quickly I was able to 1) learn how to interact with AI API's, 2) construct and interact with AI agents and workflows, and 3) deliver a product that is at least somewhat useful. Hopefully I'll have some time to flesh this out a bit more this semester!  
+
 
 
 ## Credits
-Title screen bookshelf image is from https://www.asciiart.eu/books/books
+Title screen bookshelf image is from https://www.asciiart.eu/books/books  
 Looking face lineart is from https://1lineart.kulaone.com/#/
