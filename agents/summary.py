@@ -6,11 +6,14 @@ from langchain_openai import ChatOpenAI
 class SummaryAgent():
     def __init__(self):
         pass
-
+    
+    # Loop through the ranked list with the user OR provide the summary for the user's selection
     def run(self, params):
   
-        index=params.get('index', 0)
+        index=0
         model = ChatOpenAI(model='gpt-3.5-turbo', api_key=os.environ['OPENAI_API_KEY'])
+
+        bookpile = []
 
         # Continuously load in new books from the ranking until the list is exhausted
         while index < len(params['books']):
@@ -27,8 +30,10 @@ class SummaryAgent():
             user = input("\n1) I'll read it!\n2) Load another suggestion\n\n")
 
             if user != '2':
-                return {'exit': [book]}
+                print(bookpile)
+                return {'exit': [book], 'rejected': bookpile}
             
+            bookpile.append(book)
             index += 1
 
-        return {'exit': params['books']}
+        return {'exit': [], 'rejected': params['books']}
