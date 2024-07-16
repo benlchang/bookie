@@ -30,14 +30,19 @@ class Master():
 
         chain = workflow.compile()
 
+        print("\nHey, welcome back to Bookie! Can I help you with anything?\n")
+
         while True:
             find_recs = input('1) Analyze a book\n2) Find me recommendations based on this book\n3) Quit\n\n')
-            if find_recs == '3':
+            if find_recs not in '12':
                 break
-            book = input('Which book shall I fetch for ya?')
+            book = input('\n\nWhich book shall I fetch for ya?\n\n')
 
             response = chain.invoke({'book': book, 'find_recs': find_recs == '2'})
-            print(f'\n\n{response["summary"]}\n\n')
+
+            if 'success' in response.keys():
+                print("Great! Come back when you finish, I'll have some more recommendations for you :)")
+                print("Got any more books for me?")
         
 
 if __name__ == '__main__':
