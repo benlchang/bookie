@@ -99,5 +99,3 @@ Overall, I'm proud of how quickly I was able to 1) learn how to interact with AI
 ## Credits
 Title screen bookshelf image is from https://www.asciiart.eu/books/books  
 Looking face lineart is from https://1lineart.kulaone.com/#/  
-
-*Despite the name, Bookie does NOT condone any form of sports gambling. He's not Jontay Porter.
